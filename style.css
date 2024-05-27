@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 3%;
+    color: white;
+    font-weight: 600;
+}
+
+#btnLike1 {
+    background-color: rgb(0, 0, 255);
+    border: 2px solid rgb(71, 8, 8);
+    margin: 15px;
+}
+
+#btnDislike1 {
+    background-color: rgb(0, 0, 255);
+    border: 2px solid rgb(71, 8, 8);
+    margin: 15px;
+}
+
+
+#btnLike2 {
+    background-color: rgb(0, 0, 255);
+    border: 2px solid rgb(71, 8, 8);
+    margin: 15px;
+}
+
+#btnDislike2 {
+    background-color: rgb(0, 0, 255);
+    border: 2px solid rgb(71, 8, 8);
+    margin: 15px;
+}
+
+h2 {
+    font-family: Tahoma;
+    text-align: center;
+    font-weight: 500;
+}
+
+#countDislike1 {
+    color: red;
+}
+
+
+#countDislike2 {
+    color: red;
+}
