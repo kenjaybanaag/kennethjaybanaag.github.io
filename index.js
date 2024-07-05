@@ -51,7 +51,7 @@ submit.addEventListener("click", submitComment)
 */
 
 var product1 = document.getElementById("product1");
-var qty1 = document.getElementById("qty1"); 
+var qty1 = document.getElementById("qty1");
 var price1 = document.getElementById("price1");
 
 var product2 = document.getElementById("product2");
@@ -121,7 +121,7 @@ function addOrder() {
 
     carts.textContent = orders;
     total.value = "Php " + totalAmount.toFixed(2);
-    calculateChange(); // Update change as items are added
+    calculateChange(); // Update change whenever order is added
 }
 
 function calculateChange() {
@@ -134,6 +134,15 @@ function calculateChange() {
     }
 }
 
+function resetFields() {
+    qty1.value = "";
+    qty2.value = "";
+    qty3.value = "";
+    qty4.value = "";
+    qty5.value = "";
+    qty6.value = "";
+}
+
 function finishOrder() {
     var totalAmount = parseFloat(total.value.replace("Php ", ""));
     var cashAmount = parseFloat(cash.value);
@@ -141,13 +150,10 @@ function finishOrder() {
     if (cashAmount >= totalAmount && totalAmount > 0) {
         alert("Order Successful!\n\n" + "Products Purchased:\n" + carts.textContent + "\nHAVE A GOOD DAY!");
         carts.textContent = "";
-        total.value = "Php 0.00"; // Reset total value but keep cash and change
-        qty1.value = "";
-        qty2.value = "";
-        qty3.value = "";
-        qty4.value = "";
-        qty5.value = "";
-        qty6.value = "";
+        total.value = "";
+        cash.value = "";
+        change.value = "";
+        resetFields();
     } else if (totalAmount == 0) {
         alert("Please add items to your order.");
     } else {
