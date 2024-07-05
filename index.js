@@ -121,6 +121,7 @@ function addOrder() {
 
     carts.textContent = orders;
     total.value = "Php " + totalAmount.toFixed(2);
+    calculateChange(); // Update change as items are added
 }
 
 function calculateChange() {
@@ -140,9 +141,7 @@ function finishOrder() {
     if (cashAmount >= totalAmount && totalAmount > 0) {
         alert("Order Successful!\n\n" + "Products Purchased:\n" + carts.textContent + "\nHAVE A GOOD DAY!");
         carts.textContent = "";
-        total.value = "";
-        cash.value = "";
-        change.value = "";
+        total.value = "Php 0.00"; // Reset total value but keep cash and change
         qty1.value = "";
         qty2.value = "";
         qty3.value = "";
@@ -163,6 +162,7 @@ qty4.addEventListener("keyup", addOrder);
 qty5.addEventListener("keyup", addOrder);
 qty6.addEventListener("keyup", addOrder);
 cash.addEventListener("keyup", calculateChange);
+
 
 
                         
